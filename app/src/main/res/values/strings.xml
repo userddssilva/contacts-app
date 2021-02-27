@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PhonebookByMe</string>
+    <string name="description_add_contact_button">Button to add more contact</string>
+    <string name="title_create_contact">Create contact</string>
 </resources>
