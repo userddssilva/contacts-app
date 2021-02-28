@@ -12,26 +12,14 @@
         android:orientation="horizontal"
         tools:ignore="UselessParent">
 
-        <com.google.android.material.card.MaterialCardView
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivContactImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="12dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:strokeColor="@color/white"
-            app:strokeWidth="0dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/profile_image"
-                android:contentDescription="" />
-        </com.google.android.material.card.MaterialCardView>
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/profile_image"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textColor="#7b1fa2"
+                android:textColor="#111111"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:textColor="#4a0072"
+                android:textColor="#6E6767"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@id/viewDivider"
                 app:layout_constraintEnd_toEndOf="parent"

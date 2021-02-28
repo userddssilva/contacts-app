@@ -3,6 +3,7 @@ package br.com.userddssilva.phonebookbyme.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.userddssilva.phonebookbyme.R
@@ -29,9 +30,11 @@ class ContactAdapter(
         fun bindView(item: Contact) = with(itemView) {
             val tvContactName = findViewById<TextView>(R.id.tvContactName)
             val tvContactPhone = findViewById<TextView>(R.id.tvContactPhone)
+            val tvContactImage = findViewById<ImageView>(R.id.ivContactImage)
 
             tvContactName.text = item.name
             tvContactPhone.text = item.phone
+            tvContactImage.setImageResource(R.drawable.profile_image)
         }
     }
 }
