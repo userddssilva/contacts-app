@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhonebookByMe"
         tools:ignore="AllowBackup">
+        <activity android:name=".view.EditContact"></activity>
         <activity android:name=".view.CreateContact" />
         <activity android:name=".view.MainActivity">
             <intent-filter>
