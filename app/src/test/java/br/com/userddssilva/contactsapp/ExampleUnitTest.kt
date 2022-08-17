@@ -1,4 +1,4 @@
-package br.com.userddssilva.phonebookbyme
+package br.com.userddssilva.contactsapp
 
 import org.junit.Test
 

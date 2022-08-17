@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">PhonebookByMe</string>
-
     <string name="description_add_contact_button">Button to add more contact</string>
 
     <string name="title_create_contact">Create contact</string>
-    <string name="title_edit_contact">Edit contac</string>
+    <string name="title_edit_contact">Edit contact</string>
 
     <string name="hint_name">Name</string>
     <string name="hint_phone">Phone</string>
@@ -14,4 +13,5 @@
     <string name="hint_zip">Zip</string>
     <string name="hint_email">Email</string>
     <string name="hint_birthday">Birthday</string>
+    <string name="create">Create</string>
 </resources>
