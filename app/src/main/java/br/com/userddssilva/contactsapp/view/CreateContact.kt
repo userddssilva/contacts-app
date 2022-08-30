@@ -1,7 +1,6 @@
 package br.com.userddssilva.contactsapp.view
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import br.com.userddssilva.contactsapp.R
 import br.com.userddssilva.contactsapp.model.Contact
@@ -25,23 +24,22 @@ class CreateContact : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_contact)
         initPropertiesWithUIComponents()
-        InstantiateNewContact()
+        createNewContact()
+    }
 
+    private fun createNewContact() {
         btnCreateContact.setOnClickListener {
             contact.also {
                 it.name = tiName.text.toString()
+                it.phone = tiPhone.text.toString()
+                it.address = tiAddress.text.toString()
+                it.city = tiCity.text.toString()
+                it.state = tiState.text.toString()
+                it.zip = tiZip.text.toString()
                 it.email = tiEmail.text.toString()
-
+                it.birthday = tiBirthday.text.toString()
             }
         }
-    }
-
-    private fun InstantiateNewContact() {
-//        contact = Contact(
-//            tiName.text.toString(),
-//            tiPhone.text.toString(),
-//            tiEmail.text.toString()
-//        )
     }
 
     private fun initPropertiesWithUIComponents() {
