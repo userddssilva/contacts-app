@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         rcContacts = findViewById(R.id.rcContacts)
-        btnAddNewContact = findViewById(R.id.fbtnAddNewContact)
+        btnAddNewContact = findViewById(R.id.btnAddNewContact)
 
         val contact = Contact(
             name = "Dayvson",

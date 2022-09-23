@@ -22,24 +22,29 @@ class CreateContact : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_contact)
+        setContentView(R.layout.layout_edit_contact)
         initPropertiesWithUIComponents()
         createNewContact()
     }
 
     private fun createNewContact() {
+        btnCreateContact.text = getString(R.string.Create)
         btnCreateContact.setOnClickListener {
             contact.also {
-                it.name = tiName.text.toString()
-                it.phone = tiPhone.text.toString()
-                it.address = tiAddress.text.toString()
-                it.city = tiCity.text.toString()
-                it.state = tiState.text.toString()
-                it.zip = tiZip.text.toString()
-                it.email = tiEmail.text.toString()
-                it.birthday = tiBirthday.text.toString()
+                setContactProperties(it)
             }
         }
+    }
+
+    private fun setContactProperties(contact: Contact) {
+        contact.name = tiName.text.toString()
+        contact.phone = tiPhone.text.toString()
+        contact.address = tiAddress.text.toString()
+        contact.city = tiCity.text.toString()
+        contact.state = tiState.text.toString()
+        contact.zip = tiZip.text.toString()
+        contact.email = tiEmail.text.toString()
+        contact.birthday = tiBirthday.text.toString()
     }
 
     private fun initPropertiesWithUIComponents() {
@@ -52,6 +57,6 @@ class CreateContact : AppCompatActivity() {
         tiZip = findViewById(R.id.tiZip)
         tiEmail = findViewById(R.id.tiEmail)
         tiBirthday = findViewById(R.id.tiBirthday)
-        btnCreateContact = findViewById(R.id.btnCreateContact)
+        btnCreateContact = findViewById(R.id.btnConfirm)
     }
 }

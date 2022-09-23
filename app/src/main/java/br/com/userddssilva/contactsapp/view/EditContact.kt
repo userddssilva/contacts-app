@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.userddssilva.contactsapp.R
 import br.com.userddssilva.contactsapp.model.Contact
 import br.com.userddssilva.contactsapp.utils.Constants.CONTACT_INTENT
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.gson.Gson
 
@@ -18,13 +19,15 @@ class EditContact : AppCompatActivity() {
     private lateinit var tiZip: TextInputEditText
     private lateinit var tiEmail: TextInputEditText
     private lateinit var tiBirthday: TextInputEditText
+    private lateinit var btnSave: MaterialButton
     private lateinit var contact: Contact
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_contact)
+        setContentView(R.layout.layout_edit_contact)
         initPropertiesWithUIComponents()
         loadContactFromIntentJson()
+        btnSave.text = getString(R.string.Save)
     }
 
     private fun initPropertiesWithUIComponents() {
@@ -37,6 +40,7 @@ class EditContact : AppCompatActivity() {
         tiZip = findViewById(R.id.tiZip)
         tiEmail = findViewById(R.id.tiEmail)
         tiBirthday = findViewById(R.id.tiBirthday)
+        btnSave = findViewById(R.id.btnConfirm)
     }
 
     private fun loadContactFromIntentJson() {

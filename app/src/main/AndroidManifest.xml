@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhonebookByMe"
         tools:ignore="AllowBackup">
-        <activity android:name="br.com.userddssilva.contactsapp.view.EditContact" />
-        <activity android:name="br.com.userddssilva.contactsapp.view.CreateContact" />
-        <activity android:name="br.com.userddssilva.contactsapp.view.MainActivity"
+        <activity
+            android:name="br.com.userddssilva.contactsapp.view.EditContact"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name="br.com.userddssilva.contactsapp.view.CreateContact"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name="br.com.userddssilva.contactsapp.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -18,15 +18,17 @@
         tools:listitem="@layout/item_contact" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fbtnAddNewContact"
+        android:id="@+id/btnAddNewContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:clickable="true"
+        app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_add_24"
+        app:tint="@color/white"
         android:contentDescription="@string/description_add_contact_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
